@@ -182,8 +182,8 @@ var updateDialog = {
     this.csrfToken = this.getCsrfToken();
     
     // Attach a handler for all submit buttons in dialog content
-    $( '.update-dialog-content input[type=submit]' )
-      .live( 'click', function( e ){
+    $( '.update-dialog-content' )
+		.on('click', 'input[type=submit]', function (e) {
         // Prevent default action
         e.preventDefault();
         
@@ -192,8 +192,8 @@ var updateDialog = {
       });
     
     // Attach a handler for all cancel buttons in dialog content
-    $( '.update-dialog-content .update-dialog-cancel-button' )
-      .live( 'click', function( e ){
+    $( '.update-dialog-content' )
+		.on('click', '.update-dialog-cancel-button', function (e) {
         // Prevent default action
         e.preventDefault();
         

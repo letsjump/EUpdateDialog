@@ -99,7 +99,7 @@ class EUpdateDialog extends CWidget
     
     // Open update dialog the clicking target elements
     $cs->registerScript( 'eupdatedialog', "
-      jQuery( '{$this->target}' ).live( 'click', updateDialogOpen );",
+      jQuery( '{$this->target}' ).on( 'click', updateDialogOpen );",
       CClientScript::POS_END );
     
     // Register additional options for an extension
